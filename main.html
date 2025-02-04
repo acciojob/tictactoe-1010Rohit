@@ -105,7 +105,7 @@
       <h1>Tic Tac Toe</h1>
       <input type="text" id="player-1" placeholder="Enter Player 1 Name">
       <input type="text" id="player-2" placeholder="Enter Player 2 Name">
-      <button id="submit">Submit</button>
+      <button id="submit">Start Game</button>
     </div>
 
     <!-- Game Section -->
@@ -157,7 +157,7 @@
       document.getElementById(index).textContent = board[index];
 
       if (checkWinner()) {
-        messageElement.textContent = `${players[currentPlayerIndex]}, congratulations you won!`;
+        messageElement.textContent = `${players[currentPlayerIndex]} wins! Congratulations!`;
         resetButton.style.display = 'block'; // Show reset button after winner
       } else if (board.every(cell => cell)) {
         messageElement.textContent = "It's a Draw!";
